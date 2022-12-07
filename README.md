@@ -1,3 +1,5 @@
+final.zip is the Main Folder!!!!!!!!! the latest one. The others are there for redundancy in case something is critically wrong for whatever reason.
+
 SEE YOUTUBE:
 https://www.youtube.com/watch?v=A3BSOX9DwiE
 
