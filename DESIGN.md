@@ -1,10 +1,7 @@
-INSTRUCTIONS: A “design document” for your project in the form of a Markdown file called DESIGN.md that discusses, technically, how you implemented your project and why you made the design decisions you did. Your design document should be at least several paragraphs in length. Whereas your documentation is meant to be a user’s manual, consider your design document your opportunity to give the staff a technical tour of your project underneath its hood.
-
 (1500 words)
 
-    DESIGN:
-
-            Dries (worked a lot on frontend and some backend). Technical tour of project.
+DESIGN:
+Dries (worked a lot on frontend and some backend). Technical tour of project.
 
     HOW THINGS WORK:
 
@@ -39,7 +36,6 @@ Importantly, we made sure that our frontend was pretty watertight in terms of se
 
 
         WHERE THEY ARE STORED:
-
 
 
 Our html is in a templates folder.
