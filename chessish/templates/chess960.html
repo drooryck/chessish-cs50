@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Chess960 Play
+{% endblock %}
+
+{% block main %}
+
+        <div class="row">
+        <!-- HERE GOES CHESS BOARD -->
+            <div class="row">
+                <div id="myBoard" style="width: 400px"></div>
+                <script src="{{ url_for('static', filename='chess960.js') }}"></script>
+            </div>
+
+            <!-- <div class="row">
+                 Start button for Chess960
+                <form action="/" method="post">
+                    
+                    <button class="btn btn-secondary" type="submit">Play!</button>
+                </form> 
+            </div> -->
+        
+        </div> 
+
+{% endblock %}

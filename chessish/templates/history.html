@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<!-- Check the game history of a user that you query for-->
+
+<p class="text-left">View the game history of user: <span class="text-info">{{ queried_username }}</span></p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-start">Result</th>
+                <th class="text-start">Difficulty</th>
+                <th class="text-start">Played</th>
+                <th class="text-start">PGN</th>
+                <th class="text-start">Copy PGN</th>
+                <th class="text-start">Simulate Game</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for game in games %}
+                <tr>
+                    <td class="text-start">{{ game.won }}</td>
+                    <td class="text-start">{{ game.ai_level }}</td>
+                    <td class="text-start">{{ game.timestamp }}</td>
+                    <td class="text-start" id="{{ game.pgn }}">{{ game.pgn }}</td>
+                    <td>
+                        <nav class="navbar navbar-light"> 
+                            <button class="btn btn-secondary" type="button" onclick="copyEvent('{{ game.pgn }}')"><a class="text-decoration-none link-light">Copy to Clipboard!</a></button>
+                            <script>
+                                function copyEvent(id)
+                                {
+                                    var str = document.getElementById(id);
+                                    window.getSelection().selectAllChildren(str);
+                                    document.execCommand("Copy")
+                                }
+                            </script>
+                        </nav>
+                    </td>
+                    <td>
+                        <nav class="navbar navbar-light"> 
+                            <form action="/simulate" method="post">
+                                <div class="mb-3">
+                                    <input type="hidden" class="btn btn-secondary" formaction="/simulate" formmethod="post" name="pgn" placeholder="Simulate Game" value="{{ game.pgn }}">
+                                    <button class="btn btn-secondary" type="submit">Simulate!</button>
+                                </div>
+                        </nav>
+                    </td>
+                </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+{% endblock %}

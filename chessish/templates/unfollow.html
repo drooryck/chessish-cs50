@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Unfollow a G
+{% endblock %}
+
+{% block main %}
+    <!-- Unfollow a user you once followed-->
+    <form action="/unfollow" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="name" placeholder="Enter Username" type="text">
+        </div>
+        <button class="btn btn-secondary" type="submit">Unfollow</button>
+    </form>
+{% endblock %}
