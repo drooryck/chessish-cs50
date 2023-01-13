@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Friends
+{% endblock %}
+
+{% block main %}
+    <!-- Show a list of current people who you follow and their info-->
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-start">Following:</th>
+                <th class="text-start">Bio:</th>
+                <th class="text-start">Game record:</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in network_list %}
+                <tr>
+                    <td class="text-start">{{ person.username }}</td>
+                    <td class="text-start">{{ person.bio }}</td>
+                    <td class="text-start">
+                        <nav class="navbar navbar-light"> 
+                            <button class="btn btn-secondary" type="button"><a class="text-decoration-none link-light" href="/history/{{ person.username }}">See History</a></button>
+                        </nav>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ 
+{% endblock %}
