@@ -21,7 +21,7 @@ User guide:
 1)
 The process for use is the following. It should normally work without issue.
 
-You should unzip the Chess_Project folder, and should see a folder with different subfolders (_pycache, css, flask_session, node-modules, static, as well as app.py and a database). You should open this folder with VSCode. Then open a new terminal in VSCode. Navigate inside the master folder. Install Flask if you don't have it, by running "pip install Flask". Also pip install (cs50, flask_session, helpers) just in case. Install Python as an extension (if needed). Now execute “flask run” when in the master folder.
+Download all files into a folder. It should then include different subfolders (_pycache, css, flask_session, node-modules, static) as well as app.py and a database. You should open this folder with VSCode. Then open a new terminal in VSCode. Navigate inside the master folder. Install Flask if you don't have it, by running "pip install Flask". Also pip install (cs50, flask_session, helpers) just in case. Install Python as an extension (if needed). Now execute “flask run” when in the master folder.
 
 2)
 **if flask run STILL does not work**
